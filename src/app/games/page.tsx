@@ -12,14 +12,30 @@ export default function GamesPage() {
         <h1 className={styles.title}>games</h1>
       </header>
       <ul className={styles.list}>
-        {games.map((game) => (
-          <li key={game.slug} className={styles.card}>
-            <span className={styles.cardTitle}>{game.title}</span>
-            {game.status === "coming-soon" && (
-              <span className={styles.badge}>coming soon</span>
-            )}
-          </li>
-        ))}
+        {games.map((game) => {
+          const content = (
+            <>
+              <span className={styles.cardTitle}>{game.title}</span>
+              {game.status === "coming-soon" ? (
+                <span className={styles.badge}>coming soon</span>
+              ) : (
+                <span className={styles.badge}>play &rarr;</span>
+              )}
+            </>
+          );
+
+          return (
+            <li key={game.slug}>
+              {game.url ? (
+                <a href={game.url} className={styles.card}>
+                  {content}
+                </a>
+              ) : (
+                <div className={styles.card}>{content}</div>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </main>
   );

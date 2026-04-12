@@ -3,6 +3,7 @@ export interface Game {
   title: string;
   description: string;
   status: "coming-soon" | "playable";
+  url?: string;
 }
 
 export const games: Game[] = [
@@ -16,7 +17,8 @@ export const games: Game[] = [
     slug: "neighbors",
     title: "neighbors",
     description: "",
-    status: "coming-soon",
+    status: "playable",
+    url: "https://neighbors.advaitmarathe.com",
   },
   {
     slug: "pathways",

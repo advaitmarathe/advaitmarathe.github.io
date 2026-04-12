@@ -25,6 +25,8 @@ export default function Home() {
         >
           github
         </a>
+        <span className={styles.separator}>/</span>
+        <Link href="/games">games</Link>
       </nav>
     </main>
   );
