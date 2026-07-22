@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1 className={styles.name}>advait marathe</h1>
       <p className={styles.bio}>
-        I&apos;m currently working on agents at sierra. I also like making{" "}
+        I&apos;m currently working on agents. I also like making{" "}
         <Link href="/games">games</Link>.
       </p>
       <nav className={styles.links}>
